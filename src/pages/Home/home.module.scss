@@ -1,0 +1,46 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 50px;
+}
+
+.card {
+  width: 250px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  scroll-behavior: auto;
+  position: relative;
+
+  img {
+    margin-top: 10px;
+    width: 90%;
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  h3 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__info {
+    width: 90%;
+    margin-top: 10px;
+    p {
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+  }
+}

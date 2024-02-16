@@ -1,0 +1,43 @@
+.wrapper {
+  display: flex;
+  margin: 50px;
+  gap: 30px;
+}
+
+.content {
+  img {
+    width: 250px;
+  }
+
+  &_info {
+    h3,
+    h4 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.btnExit {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-left: 30px;
+
+  &:hover {
+    color: white;
+    background-color: darken($color: rgba(81, 38, 137, 1), $amount: 0%);
+  }
+  &:active {
+    color: white;
+
+    background-color: darken($color: rgba(81, 38, 137, 1), $amount: 10%);
+  }
+}
