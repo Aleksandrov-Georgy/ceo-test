@@ -19,7 +19,7 @@ const Card = (props: PropsType) => {
 
   const favorites = useAppSelector((state) => state.product.favorites);
 
-  const { addFavorites, removeFavorites, removeCard } = useActions();
+  const { addFavorites, removeCard } = useActions();
 
   const handleClickCard = () => {
     navigate(`/product/${el.id}`);
@@ -27,7 +27,7 @@ const Card = (props: PropsType) => {
 
   const handleLikeClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
-    favorites.includes(el) ? removeFavorites(el) : addFavorites(el);
+    addFavorites(el)
     //Добавление или удаление карточки из избранного
   };
 

@@ -5,6 +5,24 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 50px;
+  justify-items: center;
+
+  @media (min-width: 1800px) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 885px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card {

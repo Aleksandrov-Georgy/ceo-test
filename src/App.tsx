@@ -8,7 +8,7 @@ import { useActions } from './Redux/hooks/actions';
 import ProductPage from './pages/ProductPage';
 
 function App() {
-  const { isSuccess, data, isLoading, isError } = useGetAllProductsQuery('');
+  const { isSuccess, data, isLoading, isError } = useGetAllProductsQuery();
   const { addItemsAll } = useActions();
 
   useEffect(() => {

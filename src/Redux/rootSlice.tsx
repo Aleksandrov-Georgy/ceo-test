@@ -19,11 +19,11 @@ export const productSlice = createSlice({
       state.items = action.payload;
     },
     addFavorites(state, action: PayloadAction<Item>) {
-      if (state.favorites.some((item) => item.id === action.payload.id)) {
+      if (state.favorites.find(({ id }) => id === action.payload.id)) {
+        state.favorites = state.favorites.filter((item) => item.id !== action.payload.id);
         return;
-      } else {
-        state.favorites.push(action.payload);
       }
+      state.favorites.push(action.payload);
     },
     removeFavorites(state, action: PayloadAction<Item>) {
       state.favorites = state.favorites.filter((item) => item.id !== action.payload.id);

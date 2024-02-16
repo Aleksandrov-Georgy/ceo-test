@@ -23,6 +23,10 @@
       line-height: 75px;
       letter-spacing: 0em;
       cursor: pointer;
+
+      @media (max-width: 600px) {
+        font-size: 24px;
+      }
     }
 
     p {
@@ -38,9 +42,9 @@
 
 .button {
   background-color: transparent;
-  position: absolute;
-  right: 80px;
-  top: 32px;
+  // position: absolute;
+  // right: 80px;
+  // top: 32px;
   color: rgba(248, 248, 248, 1);
   padding: 8px 16px;
   border-radius: 8px;
@@ -54,48 +58,52 @@
   &:active {
     background-color: darken($color: rgba(81, 38, 137, 1), $amount: 15%);
   }
-}
 
-.header__exitButton {
-  display: none;
-
-  @media (max-width: 767px) {
-    width: 40px;
-    height: 40px;
-    display: block;
-    position: absolute;
-    right: 16px;
-    top: 16px;
+  @media (max-width: 600px) {
+    // width: 100%;
   }
 }
 
-.button__backBtn {
-  cursor: pointer;
-  background-color: transparent;
-  position: absolute;
-  left: 80px;
-  top: 32px;
-  color: rgba(248, 248, 248, 1);
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(248, 248, 248, 1);
-  transition: all 0.2s ease-in-out;
+// .header__exitButton {
+//   display: none;
 
-  &:hover {
-    background-color: darken($color: rgba(81, 38, 137, 1), $amount: 5%);
-  }
-  &:active {
-    background-color: darken($color: rgba(81, 38, 137, 1), $amount: 15%);
-  }
+//   @media (max-width: 767px) {
+//     width: 40px;
+//     height: 40px;
+//     display: block;
+//     position: absolute;
+//     right: 16px;
+//     top: 16px;
+//   }
+// }
 
-  @media (max-width: 767px) {
-    display: none;
-  }
-}
+// .button__backBtn {
+//   cursor: pointer;
+//   background-color: transparent;
+//   position: absolute;
+//   left: 80px;
+//   top: 32px;
+//   color: rgba(248, 248, 248, 1);
+//   padding: 8px 16px;
+//   border-radius: 8px;
+//   border: 1px solid rgba(248, 248, 248, 1);
+//   transition: all 0.2s ease-in-out;
 
-.button__backButton {
-  display: none;
-}
+//   &:hover {
+//     background-color: darken($color: rgba(81, 38, 137, 1), $amount: 5%);
+//   }
+//   &:active {
+//     background-color: darken($color: rgba(81, 38, 137, 1), $amount: 15%);
+//   }
+
+//   @media (max-width: 767px) {
+//     display: none;
+//   }
+// }
+
+// .button__backButton {
+//   display: none;
+// }
 
 .card {
   width: 250px;
